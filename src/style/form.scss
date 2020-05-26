@@ -1,0 +1,97 @@
+@use './colors.scss' as colors;
+
+.form {
+  background-image: linear-gradient(0deg, hsla(0, 0%, 100%, 0) 90%, #f5f6f8);
+  border-top: 2px solid colors.$blue;
+  padding: 40px 75px;
+  display: block;
+  margin: 0 auto;
+  text-align: center;
+  &__errors {
+    background-color: rgba(205, 92, 92, 0.1);
+    padding: 10px 10px 10px 20px;
+    margin-bottom: 10px;
+    border-left: 2px solid colors.$red;
+    border-radius: 2px;
+    color: colors.$red;
+    text-align: left;
+    display: none;
+  }
+  &__list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  &__success {
+    background-color: colors.$light-green;
+    padding: 10px 10px 10px 20px;
+    margin-bottom: 10px;
+    border-left: 2px solid colors.$green;
+    border-radius: 2px;
+    color: colors.$green;
+    text-align: left;
+    display: none;
+  }
+  &__label {
+    width: 100%;
+    display: block;
+    text-align: left;
+    font-size: 12px;
+    font-weight: 500;
+    color: colors.$dark-grey;
+    letter-spacing: 0.2px;
+    line-height: 24px;
+    &--checkbox {
+      vertical-align: middle;
+      display: inline;
+    }
+  }
+  &__input {
+    box-sizing: border-box;
+    outline: none;
+    border: 1px solid #dfe6ee;
+    border-radius: 2px;
+    color: colors.$dark-grey;
+    font-weight: 500;
+    width: 100%;
+    margin: auto;
+    margin-bottom: 0.6rem;
+    font-size: 12px;
+    padding-left: 10px;
+    padding-right: 10px;
+    height: 35px;
+    &:focus {
+      border: 1px solid colors.$blue;
+      box-shadow: 0 0 3px 0 colors.$box-shadow;
+    }
+    &--submit {
+      color: colors.$white;
+      font-weight: 300;
+      text-decoration: none;
+      padding: 20px 40px;
+      margin-top: 10px;
+      cursor: pointer;
+      transition: 0.1s;
+      border: none;
+      background: colors.$blue;
+      text-shadow: 0 1px 3px rgba(36, 46, 180, 0.4);
+      outline: none;
+      border-radius: 2px;
+      font-weight: 600;
+      font-size: 14px;
+      text-transform: uppercase;
+      height: 56px;
+      width: 100%;
+    }
+  }
+  &__checkboxes {
+    text-align: left;
+  }
+  &__checkbox {
+    vertical-align: middle;
+  }
+  ::placeholder {
+    color: colors.$grey;
+    font-size: 12px;
+  }
+}

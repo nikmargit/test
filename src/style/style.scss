@@ -1,0 +1,21 @@
+@use './normalize.scss';
+@use './colors.scss' as colors;
+@use './navigation.scss';
+@use './spinner.scss';
+@use './form.scss';
+@import url('https://fonts.googleapis.com/css2?family=Hind+Vadodara:wght@300;500&display=swap');
+
+body {
+  background-color: #f4f6fa;
+  transition: all 0.25s;
+  font-family: 'Hind Vadodara', sans-serif;
+  font-weight: 300;
+}
+
+.content {
+  max-width: 550px;
+  margin: 50px auto;
+  background-color: colors.$white;
+  box-shadow: 0 30px 75px 0 rgba(10, 25, 41, 0.2);
+  border-radius: 4px;
+}

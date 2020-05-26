@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Register</title>
+    <meta name="Nikola Margit" content="Pure JS registration page" />
+    <link rel="stylesheet" href="bundle.css" />
+  </head>
+  <body>
+    <div class="spinner-wrap"><div class="spinner"></div></div>
+    <div class="wrapper">
+      <div class="content">
+        <div class="header">
+          <h2 class="header__title">Welcome!</h2>
+          <p class="header__subtitle">
+            Please register using email or phone number.
+          </p>
+        </div>
+        <nav class="nav">
+          <button name="email" class="nav__tab nav__tab--active">
+            Register with Email
+          </button>
+          <button name="phone" class="nav__tab">
+            Register with Mobile
+          </button>
+        </nav>
+        <div class="form">
+          <div class="form__errors">
+            <ul class="form__list"></ul>
+          </div>
+          <div class="form__success">
+            <p>Registration successful, proceed to log in.</p>
+          </div>
+          <form id="form" novalidate>
+            <div class="tab-content phone">
+              <label for="phone" class="form__label">Mobile number</label>
+              <input
+                type="tel"
+                name="phone"
+                placeholder="+381555555"
+                class="form__input"
+              />
+            </div>
+            <div class="tab-content email">
+              <label for="email" class="form__label">Email</label>
+              <input
+                type="email"
+                name="email"
+                placeholder="john@gmail.com"
+                class="form__input"
+              />
+            </div>
+            <label for="currency" class="form__label">Currency</label>
+            <input
+              list="currency"
+              name="currency"
+              placeholder="Euro"
+              class="form__input"
+            />
+            <datalist id="currency"> </datalist>
+            <div class="form__checkboxes">
+              <input
+                type="checkbox"
+                name="terms"
+                value="terms"
+                class="form__checkbox"
+              />
+              <label for="terms" class="form__label form__label--checkbox">
+                I agree to the terms and conditions</label
+              >
+              <br />
+              <input
+                type="checkbox"
+                name="promo"
+                value="promo"
+                class="form__checkbox"
+              />
+              <label for="promo" class="form__label form__label--checkbox">
+                Keep me up to date with news and announcements</label
+              >
+            </div>
+            <input
+              type="submit"
+              value="Register"
+              class="form__input form__input--submit"
+            />
+          </form>
+        </div>
+      </div>
+    </div>
+    <script src="bundle.js"></script>
+  </body>
+</html>
